@@ -12,16 +12,4 @@ class Test {
     private val settings: ProducerSettings<ByteArray, ByteArray> = TODO()
     val flow = flow<ProducerMessage.Envelope<ByteArray, ByteArray, Unit>>()
         .via<ProducerMessage.Results<ByteArray, ByteArray, Unit>, NotUsed>(Producer.flexiFlow(settings))
-
-//  fun test() {
-//    emptyList<String>()
-//      .stream()
-//      .collect(
-//        Collectors.groupingBy(
-//          Functions.identity(),
-//          Collectors.counting()
-//        )
-//      )
-//  }
-
 }
